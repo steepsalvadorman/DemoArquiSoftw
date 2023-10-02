@@ -18,9 +18,13 @@ import java.util.Date;
 @NoArgsConstructor
 public class Pet implements Serializable {
 
-    @Serial
+    @Serial //se esta especificando un identificador de serializacion personalizado (bytes)
     private static final long serialVersionUID = 4889087778273529265L;
-
+    //lectura desde un archivo o almacenamiento
+    // transmision de objetos a traves de la red
+    // comunicacion entre hilos o procesos
+    // almacenamiento en cache
+    //sesiones de aplicaciones web
     @Id
     private String name;
 

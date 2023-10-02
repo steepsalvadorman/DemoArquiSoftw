@@ -3,7 +3,7 @@ apiVersion: v1
 kind: List
 items:
   - apiVersion: v1
-    kind: Service
+    kind: Service #Este servicio se utiliza para enrutar el trafico hacia nuestros pods de la aplicacion
     metadata:
       labels:
         app: spring-boot-kubernetes-mysql
@@ -15,18 +15,18 @@ items:
           port: 8080
           protocol: TCP
           targetPort: 8080
-          nodePort: 31371
+          nodePort: 31371 #significa que el servicio sera accesible desde fuera del cluster a traves de un puerto 31371
       type: NodePort
       selector:
         app: spring-boot-kubernetes-mysql
   - apiVersion: v1
-    kind: ServiceAccount
+    kind: ServiceAccount #se utiliza para autenticar pods y controlar los permisos que tienen dentro del cluster
     metadata:
       name: spring-boot-kubernetes-mysql
       labels:
         account: spring-boot-kubernetes-mysql
   - apiVersion: apps/v1
-    kind: Deployment
+    kind: Deployment #Un depliegue en kubernetes se encarga de gestionar y mantener un conjunto de replicas de una aplicacion
     metadata:
       labels:
         app: spring-boot-kubernetes-mysql
