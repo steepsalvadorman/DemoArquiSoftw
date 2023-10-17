@@ -6,7 +6,7 @@ Proyecto de implementacion una aplicación Spring Boot (microservicio) con una b
 
 - Docker with kubernetes enabled
 - Kubernetes command-line tool(kubectl)
-- JRE 20
+- JDK 17 LTS +
 - Install Gradle
 - Install Curl
 
